@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
             binding.recyclerView.layoutManager = linearLayoutManager
             newsAdapter = NewsAdapter()
             newsAdapter.getNews(response.newsList)
+            binding.setItemCount(response.newsList.size.toString())
             binding.recyclerView.adapter = newsAdapter
         }
 
